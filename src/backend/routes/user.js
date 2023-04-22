@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
 router.use(cookieParser());
-router.use(cors({ credentials: true }));
+router.use(cors({ credentials: true, origin: 'https://keeper-app-o1ey.onrender.com' }));
 
 // signup
 router.route('/signup').post((req, res) => {
