@@ -20,7 +20,7 @@ export default function CreateNote({ user, posts, setPosts, setOpenPopup }) {
             content: data.get('content'),
         };
 
-        const noteData = await fetch('http://localhost:3000/user/post', {
+        const noteData = await fetch('https://keeper-app-back.onrender.com/user/post', {
             method: 'POST',
             mode: 'cors',
             headers: {

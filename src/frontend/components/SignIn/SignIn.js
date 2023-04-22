@@ -23,7 +23,7 @@ export default function SignIn({ user, setNewUser, setSignIn, setPosts }) {
             password: data.get('password'),
         };
 
-        const userData = await fetch('http://localhost:3000/user/login', {
+        const userData = await fetch('https://keeper-app-back.onrender.com/user/login', {
             method: 'POST',
             mode: 'cors',
             credentials: 'include',
@@ -41,7 +41,7 @@ export default function SignIn({ user, setNewUser, setSignIn, setPosts }) {
         }
 
         const posts = await fetch(
-            'http://localhost:3000/user/post?user=' + user._id,
+            'https://keeper-app-back.onrender.com/user/post?user=' + user._id,
             {
                 method: 'GET',
                 mode: 'cors',

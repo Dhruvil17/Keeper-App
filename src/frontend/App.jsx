@@ -12,7 +12,7 @@ async function checkValidity(setNewUser, setPosts) {
     const uid = cookieObj.get('uid').slice(2).replaceAll('"', '');
 
     if (uid && uid !== '') {
-        const userData = await fetch('http://localhost:3000/user/letin', {
+        const userData = await fetch('https://keeper-app-back.onrender.com/user/letin', {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -23,7 +23,7 @@ async function checkValidity(setNewUser, setPosts) {
 
         const user = await userData.json();
         const posts = await fetch(
-            'http://localhost:3000/user/post?user=' + user._id,
+            'https://keeper-app-back.onrender.com/user/post?user=' + user._id,
             {
                 method: 'GET',
                 mode: 'cors',

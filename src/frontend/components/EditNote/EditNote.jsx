@@ -30,7 +30,7 @@ export default function EditNote({
     }
 
     async function handleUpdate(){
-        const noteData = await fetch('http://localhost:3000/user/update', {
+        const noteData = await fetch('https://keeper-app-back.onrender.com/user/update', {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -40,7 +40,7 @@ export default function EditNote({
         });
 
         const posts = await fetch(
-            'http://localhost:3000/user/post?user=' + user._id,
+            'https://keeper-app-back.onrender.com/user/post?user=' + user._id,
             {
                 method: 'GET',
                 mode: 'cors',

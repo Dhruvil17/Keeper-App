@@ -39,7 +39,7 @@ export default function SignUp({ user, setNewUser, setSignUp }) {
             password: data.get('password'),
         };
         // console.log(credentials);
-        const userData = await fetch('http://localhost:3000/user/signup', {
+        const userData = await fetch('https://keeper-app-back.onrender.com/user/signup', {
             method: 'POST',
             mode: 'cors',
             credentials: 'same-origin',

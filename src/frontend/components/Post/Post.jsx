@@ -14,7 +14,7 @@ import qs from 'qs';
 
 export default function MediaCard({ posts, user, setPosts }) {
     async function deletePost(id) {
-        await fetch('http://localhost:3000/user/delete', {
+        await fetch('https://keeper-app-back.onrender.com/user/delete', {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -24,7 +24,7 @@ export default function MediaCard({ posts, user, setPosts }) {
         });
 
         const posts = await fetch(
-            'http://localhost:3000/user/post?user=' + user._id,
+            'https://keeper-app-back.onrender.com/user/post?user=' + user._id,
             {
                 method: 'GET',
                 mode: 'cors',
